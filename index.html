@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Amani Magdoubi">
+    <title>Dice Game</title>
+    <!-- CSS Styles & Fonts -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Dice Game</h1>
+    <div class="instructions">
+        <h2>Instructions:</h2>
+        <p>Roll the dice to begin the game</p>        
+    </div>
+
+    <div id="outcomeMessage">
+        <p>Result: </p>
+    </div>
+    
+    <div> 
+        <img src="./images/dice6.png">
+        <audio src="./audio/SLTLDQL-dice.mp3"></audio>
+    </div>
+
+    <div>
+        <button type="button">Throw Dice!</button>
+    </div>
+    <footer>
+        <div>
+            <h2>The Rules:</h2>
+            <p>If you get 20 or more points you have WON the game!</p>
+            <p>But if you get 1 on a Dice throw you LOSE!</p>
+        </div>
+    </footer>   
+    
+    <script src="./app.js"></script>
+</body>
+</html>
