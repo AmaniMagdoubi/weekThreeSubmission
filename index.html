@@ -1,44 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Amani Magdoubi">
-    <title>Dice Game</title>
-    <!-- CSS Styles & Fonts -->
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-</head>
-<body>
-    <h1>Dice Game</h1>
-    <div class="instructions">
-        <h2>Instructions:</h2>
-        <p>Roll the dice to begin the game</p>        
-    </div>
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A 1 player Dice Game">
+        <meta name="keywords" content="Dice Game, Game, 1 Player, Coding Project">
+        <meta name="author" content="Amani Magdoubi">
+        <title>Dice Game by Amani</title>
+        <!-- CSS Styles & Fonts -->
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    </head>
 
-    <div id="outcomeMessage">
-        <p>Result: </p>
-    </div>
-    
-    <div> 
-        <img src="./images/dice6.png">
-        <audio src="./audio/SLTLDQL-dice.mp3"></audio>
-    </div>
-
-    <div>
-        <button type="button">Throw Dice!</button>
-    </div>
-    <footer>
-        <div>
-            <h2>The Rules:</h2>
-            <p>If you get 20 or more points you have WON the game!</p>
-            <p>But if you get 1 on a Dice throw you LOSE!</p>
+    <body>
+        <!-- 1 - Page Header -->
+        <div id="heading">
+            <h1>Dice Game</h1>
+            <p id="instructionsText">* Roll the dice to begin the game *</p>
         </div>
-    </footer>   
-    
-    <script src="./app.js"></script>
-</body>
+        
+        <!-- 2 - Total Score and Game Outcome -->
+        <div id="outcomeDiv">
+            <div id="outcomeMessage">
+                <p id="yourScore"></p>
+                <br>
+                <p id="winOrLose"></p>
+            </div>
+        </div>
+
+        <!-- 3 - Images and Audio (dice) -->
+        <div id="diceDiv"> 
+            <img id="diceImg" src="./images/dice6.png" data-value="6">
+
+            <audio id="diceAudio">
+                <source src="./audio/diceSound.mp3"type="audio/mpeg">
+            </audio>
+        </div>
+
+        <!-- 4 - Button to throw Dice -->
+        <div id="buttonDiv">
+            <button type="button" id="diceClick" onclick="diceFunction()">Throw Dice!</button>
+        </div>
+
+        <!-- 5 - Footer of Game Rules -->
+        <footer>
+            <div>
+                <h2>The Rules:</h2>
+                <div id="rulesText">
+                    <p class="rulesPara">* If you get 20 or more points you have WON the game! *</p>
+                    <p class="rulesPara">* But if you get 1 on a Dice throw you LOSE! *</p>
+                </div>
+            </div>
+        </footer>
+        <!-- Link to JavaScript file -->
+        <script src="./app.js"></script>
+    </body>
 </html>

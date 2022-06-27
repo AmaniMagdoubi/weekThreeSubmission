@@ -1,16 +1,76 @@
+/* Universal style to all page */
 * {
     font-family: 'Permanent Marker', cursive;
     background-color: #E9C46A; 
 }
 
-h1 {
-    font-size: 50px;
-    text-align: center;
+#heading {
     border: black 3px solid;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
     letter-spacing: 5px;
+    margin: 0;
+}
+
+#instructionsText {
+    text-align: center;
+    background-color: white;
+    letter-spacing: 5px;
+    font-size: 30px;
 }
 
 h2 {
     text-decoration: underline;
     letter-spacing: 5px;
+    font-size: 30px;
 }
+
+#diceDiv, #buttonDiv  {
+    display: flex;
+    justify-content: center;
+}
+
+#buttonDiv {
+    margin: 30px;
+} 
+
+#diceClick {
+    font-size: 25px;
+    border: black 3px solid;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+#diceClick:hover {
+    background-color: white;
+    /* CSS Transition */
+    width: 15%;
+}
+
+#rulesText {
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+}
+ 
+.rulesPara {
+    background-color: #8efee4;
+}
+
+
+#outcomeDiv {
+    display: flex;
+    justify-content: center;
+}
+
+
+#yourScore, #winOrLose {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    font-size: 30px;
+}
+
